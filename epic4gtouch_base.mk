@@ -23,7 +23,6 @@ PRODUCT_LOCALES += hdpi
 # Init files
 PRODUCT_COPY_FILES := \
 	device/samsung/epic4gtouch/lpm.rc:root/lpm.rc \
-	device/samsung/epic4gtouch/init.rc:root/init.rc \
 	device/samsung/epic4gtouch/init.smdk4210.usb.rc:root/init.smdk4210.usb.rc \
 	device/samsung/epic4gtouch/init.smdk4210.rc:root/init.smdk4210.rc \
 	device/samsung/epic4gtouch/ueventd.smdk4210.rc:root/ueventd.smdk4210.rc
@@ -181,7 +180,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Set default USB interface
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc 
+	ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc \
+        persist.sys.usb.config=mass_storage
 
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 

@@ -92,7 +92,7 @@ static int check_vendor_module()
 }
 
 const static char * video_preview_sizes[] = {
-    "1920x1080,1280x720,640x480",
+    "1920x1080,1280x720,720x480",
     "640x480,352x288,320x240,176x144"
 };
 
